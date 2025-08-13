@@ -1,7 +1,7 @@
 # Beginner-Friendly OOPs in Python
 
 ## Repository Structure:
-
+```
 Basic_OOPs/
 │
 ├── 01-Introduction to OOP
@@ -12,3 +12,4 @@ Basic_OOPs/
 ├── 06-Getters and Setters
 ├── 07 OOP Principles
 └── README.md
+```

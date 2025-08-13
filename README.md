@@ -1,6 +1,6 @@
 # OOPs in Python – Complete Guide with Examples
 
-[https://algorithmman.com/wp-content/uploads/2024/07/Future-Trends-in-Object-Oriented-Programming.gif](https://algorithmman.com/wp-content/uploads/2024/07/Future-Trends-in-Object-Oriented-Programming.gif)
+<img src="https://algorithmman.com/wp-content/uploads/2024/07/Future-Trends-in-Object-Oriented-Programming.gif" alt="Future Trends in OOP" width="800">
 
 This repository is a **comprehensive and practical guide** to **Object-Oriented Programming (OOP)** in Python, starting from the basics and progressing to advanced concepts, with **clear code examples** for each topic.  
 It’s designed for **beginners to intermediate learners** who want to master OOP in Python.

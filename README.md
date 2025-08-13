@@ -87,6 +87,7 @@ To bring everything together, we’ve created a **small but complete project**:
 
 ## 📂 Repository Structure
 
+```
 OOPs_Advanced/
 │
 ├── 01_Introduction_to_OOP.py
@@ -108,3 +109,4 @@ OOPs_Advanced/
 ├── 17_SOLID_Principles_Overview.md
 ├── 18_Final_Project_Library_Management.py
 └── README.md
+```

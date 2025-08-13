@@ -13,3 +13,9 @@ Basic_OOPs/
 ├── 07 OOP Principles
 └── README.md
 ```
+
+**NOTE:**
+
+Original Repository: https://github.com/jimdevops19/PythonOOP
+
+Credit: FreeCodeCamp & JimShapedCoding

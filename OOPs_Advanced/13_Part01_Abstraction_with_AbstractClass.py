@@ -38,3 +38,11 @@ car.stop_engine()
 
 scooter.start_engine()
 scooter.stop_engine()
+
+
+# Key Points:
+
+# Abstract classes cannot be instantiated directly.
+# Abstract methods must be implemented in all subclasses.
+# You can have concrete methods in an abstract class for shared functionality.
+# Useful for defining a common interface for multiple classes.

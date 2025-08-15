@@ -104,9 +104,7 @@ OOPs_Advanced/
 ├── 12_Polymorphism.py
 ├── 13_Abstraction.py
 ├── 14_Special_Methods.py
-├── 15_Composition_vs_Inheritance.py
-├── 16_Property_Decorators.py
-├── 17_SOLID_Principles_Overview.md
-├── 18_Final_Project_Library_Management.py
+├── 15_SOLID_Principles_Overview.md
+├── 16_Final_Project_Library_Management.py
 └── README.md
 ```

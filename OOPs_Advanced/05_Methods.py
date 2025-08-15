@@ -1,53 +1,58 @@
-# Instance Variables vs Class Variables in Python
+# Methods in Python OOP
+# Types of Methods:
+# 1. Instance Method    → Works with object data (needs 'self')
+# 2. Class Method       → Works with class data (needs 'cls', uses @classmethod)
+# 3. Static Method      → Utility function, works independently (uses @staticmethod)
 
-class Employee:
-    # Class variable (shared across all instances)
-    company_name = "TechCorp"
+class School:
+    # Class variable
+    school_name = "Green Valley High School"
 
-    def __init__(self, name, salary):
-        # Instance variables (unique for each object)
-        self.name = name
-        self.salary = salary
+    def __init__(self, student_name, grade):
+        # Instance variables
+        self.student_name = student_name
+        self.grade = grade
 
-    def display_info(self):
-        print(f"Name: {self.name}, Salary: {self.salary}, Company: {Employee.company_name}")
+    # 1. Instance Method (accesses instance variables)
+    def display_student_info(self):
+        print(f"Student: {self.student_name}, Grade: {self.grade}")
+
+    # 2. Class Method (accesses/modifies class variables)
+    @classmethod
+    def change_school_name(cls, new_name):
+        cls.school_name = new_name
+        print(f"School name changed to: {cls.school_name}")
+
+    # 3. Static Method (utility method, doesn't access class or instance variables)
+    @staticmethod
+    def is_passing(score):
+        return score >= 40
 
 # Creating objects
-emp1 = Employee("Alice", 50000)
-emp2 = Employee("Bob", 60000)
+student1 = School("Alice", "10th")
+student2 = School("Bob", "9th")
 
-# Accessing instance and class variables
-emp1.display_info()
-emp2.display_info()
+# Instance method usage
+student1.display_student_info()
+student2.display_student_info()
 
-# Changing class variable
-Employee.company_name = "CodeMasters"
+# Class method usage
+School.change_school_name("Blue Ridge Academy")
 
-print("\nAfter changing class variable:")
-emp1.display_info()
-emp2.display_info()
-
-# Changing instance variable for one object
-emp1.salary = 55000
-print("\nAfter changing instance variable for emp1:")
-emp1.display_info()
-emp2.display_info()
+# Static method usage
+print(f"Is 35 passing? {School.is_passing(35)}")
+print(f"Is 75 passing? {School.is_passing(75)}")
 
 """
 Output:
-Name: Alice, Salary: 50000, Company: TechCorp
-Name: Bob, Salary: 60000, Company: TechCorp
-
-After changing class variable:
-Name: Alice, Salary: 50000, Company: CodeMasters
-Name: Bob, Salary: 60000, Company: CodeMasters
-
-After changing instance variable for emp1:
-Name: Alice, Salary: 55000, Company: CodeMasters
-Name: Bob, Salary: 60000, Company: CodeMasters
+Student: Alice, Grade: 10th
+Student: Bob, Grade: 9th
+School name changed to: Blue Ridge Academy
+Is 35 passing? False
+Is 75 passing? True
 """
 
 # Key points:
-# - Class variables are shared by all objects (change affects all instances).
-# - Instance variables are unique for each object (change affects only that object).
-# - Access class variables using the class name for clarity.
+# - Instance methods: Work with object attributes.
+# - Class methods: Work with class attributes and are marked with @classmethod.
+# - Static methods: Independent utility functions, marked with @staticmethod.

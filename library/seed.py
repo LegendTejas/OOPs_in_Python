@@ -1,4 +1,4 @@
-from library.library import Library
+from library import Library
 
 def seed_library():
     lib = Library()

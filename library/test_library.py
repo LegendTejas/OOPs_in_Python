@@ -1,5 +1,5 @@
 import pytest
-from library.library import Library
+from library import Library
 
 def test_add_and_list_books(capsys):
     lib = Library()

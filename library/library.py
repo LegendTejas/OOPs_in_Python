@@ -48,7 +48,11 @@ class Library:
         for b in self.books:
             print(b)
 
-    def search_by_author(self, author: str) -> List[Book]:
-        """Return all books whose author matches (case-insensitive, trims spaces)."""
-        q = author.strip().lower()
-        return [b for b in self.books if b.author.lower() == q]
+    def search_by_author(self, author_name):
+        """
+        Search for books by a specific author (case-insensitive).
+        """
+        return [
+            book for book in self.books
+            if book.author.lower() == author_name.lower()
+        ]

@@ -36,3 +36,15 @@ lib.borrow_book("Dune")     # True if available
 lib.return_book("Dune")     # True if it was borrowed
 lib.list_books()            # prints status
 ```
+
+
+NOTE:
+
+Borrow API change:
+- `borrow_book(title)` now returns `(bool, Optional[int])`:
+
+    - `(True, index)` when a copy was successfully borrowed (index is the list index of that copy).
+
+    - `(False, None)` if no available copy found.
+
+This enables disambiguation when multiple identical titles exist.

@@ -60,6 +60,28 @@ class Library:
                 return True, idx
         return False, None
 
+    def borrow_book_verbose(self, title: str) -> Tuple[bool, str]:
+        """
+        Borrow a book with verbose error messages.
+        Returns (success, message) tuple.
+        """
+        q = title.strip().lower()
+        found_book = False
+        
+        for idx, b in enumerate(self.books):
+            if b.title.strip().lower() == q:
+                found_book = True
+                if b.is_available:
+                    b.borrow()
+                    return True, f"Successfully borrowed '{b.title}'"
+                else:
+                    return False, f"'{b.title}' is already borrowed"
+        
+        if not found_book:
+            return False, f"Book '{title}' not found in library"
+        
+        return False, "Unknown error occurred"
+
     def return_book(self, title: str) -> bool:
         """
         Return the first borrowed copy matching title. Returns True on success.
@@ -102,6 +124,24 @@ class Library:
         """
         q = author_name.strip().lower()
         return [book for book in self.books if book.author.strip().lower() == q]
+
+    def search_by_title(self, query: str) -> List[Book]:
+        """
+        Case-insensitive partial-match search by title.
+        Returns all books where title contains the query string.
+        """
+        q = query.strip().lower()
+        return [book for book in self.books if q in book.title.strip().lower()]
+
+    def stats(self) -> dict:
+        """
+        Return statistics about the library.
+        Returns dict with counts: {"total": n, "available": a, "borrowed": b}
+        """
+        total = len(self.books)
+        available = sum(1 for book in self.books if book.is_available)
+        borrowed = total - available
+        return {"total": total, "available": available, "borrowed": borrowed}
 
     def remove_book(self, title: str) -> int:
         """

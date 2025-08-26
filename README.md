@@ -1,5 +1,7 @@
 # OOPs in Python – Complete Guide with Examples
 
+[![CI](https://github.com/LegendTejas/OOPs_in_Python/actions/workflows/ci.yml/badge.svg)](https://github.com/LegendTejas/OOPs_in_Python/actions/workflows/ci.yml)
+
 <img src="https://algorithmman.com/wp-content/uploads/2024/07/Future-Trends-in-Object-Oriented-Programming.gif" alt="Future Trends in OOP" width="800">
 
 This repository is a **comprehensive and practical guide** to **Object-Oriented Programming (OOP)** in Python, starting from the basics and progressing to advanced concepts, with **clear code examples** for each topic.  
